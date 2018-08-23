@@ -13,8 +13,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/testdb");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static('client/build'));
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // have all of our api routes
 app.get("/api/notes", function(req, res){
   Note.find({}).then(dbModel => res.json(dbModel));
