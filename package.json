@@ -19,9 +19,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.8",
-    "if-env": "^1.0.4"
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
   }
 }
